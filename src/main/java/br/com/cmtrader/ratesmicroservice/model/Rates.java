@@ -9,7 +9,12 @@ public class Rates{
     private String open;
 	private String high;
 	private String low;
-	private String close;
+    private String close;
+    private String tickVolume;
+    private String spread;
+    private String realVolume;
+
+
 	
 	public void setTime(String time) {
         this.time = time;
@@ -51,9 +56,39 @@ public class Rates{
         return close;
     }
 
+    
+	/**
+	 * @return the tickVolume
+	 */
+	public String getTickVolume() {
+		return tickVolume;
+	}
+
+	/**
+	 * @param tickVolume the tickVolume to set
+	 */
+	public void setTickVolume(String tickVolume) {
+		this.tickVolume = tickVolume;
+	}
+
+	/**
+	 * @return the spread
+	 */
+	public String getSpread() {
+		return spread;
+	}
+
+	/**
+	 * @param spread the spread to set
+	 */
+	public void setSpread(String spread) {
+		this.spread = spread;
+	}
+    
     @Override
     public String toString() {
-        return "Rates [time=" + time + ", open=" + open + ", high=" + high + ", low"+ low + "close=" + close + "]";
+        return "Rates [time=" + time + ", open=" + open + 
+        ", high=" + high + ", low"+ low + "close=" + close + 
+        "tick_volume" + tickVolume + "spread" + spread + "real_volume" + realVolume + "]";
     }
-       
 }
